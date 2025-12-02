@@ -1,0 +1,14 @@
+post http://localhost:3000/usuario/users
+Content-Type: application/json
+
+{
+    "nombre_completo": "Javier nombre2",
+    "apellidos":" Apellido1 Apellido 2",
+    "correo": "Javier@insightflow.cl",
+    "usuario": "UsuarioJavier",
+    "contrasenia": "passJavier",
+    "fecha_nacimiento": "2004/11/25",
+    "telefono":"+56 9 3333 2222",
+    "direccion": "Direccion6"
+    
+} 
