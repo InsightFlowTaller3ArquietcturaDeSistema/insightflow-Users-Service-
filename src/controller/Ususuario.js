@@ -54,4 +54,103 @@ export class UsuarioController{
             })   
         }
     }
+    static getAllUser(req,res){
+        try{
+            const result = UsuarioModelo.TodosDatos()
+            if(result.status !==200){
+                return res.status(result.status).json({
+                    message:result.message,
+                    data:result.data
+                })
+            }
+            return res.status(result.status).json(
+                    {
+                        message:result.message,
+                        data:result.data
+                    }
+                )
+        }catch(error){
+            console.log("Error ? ", error.message)
+            return res.status(400).json({
+                
+                message: "Datos invalidos",
+                error:error.message
+            })   
+        }
+    }
+    static getIdUsuario(req,res){
+        try{
+            const result = UsuarioModelo.TodosDatosId(req.params.id)
+            if(result.status !==200){
+                return res.status(result.status).json({
+                    message:result.message,
+                    data:result.data
+                })
+            }
+            return res.status(result.status).json(
+                    {
+                        message:result.message,
+                        data:result.data
+                    }
+                )
+        }catch(error){
+            console.log("Error ? ", error.message)
+            return res.status(400).json({
+                
+                message: "Datos invalidos",
+                error:error.message
+            })   
+        }
+    }
+    static patchUsuario(req,res){
+        const data ={id:req.params.id,
+            ...req.body
+        }
+        try{
+            const result = UsuarioModelo.actualizarUsuario(data)
+            if(result.status !==200){
+                return res.status(result.status).json({
+                    message:result.message,
+                    data:result.data
+                })
+            }
+            return res.status(result.status).json(
+                    {
+                        message:result.message,
+                        data:result.data
+                    }
+                )
+        }catch(error){
+            console.log("Error ? ", error.message)
+            return res.status(400).json({
+                
+                message: "Datos invalidos",
+                error:error.message
+            })   
+        }
+    }
+    static deleteUsuario(req,res){
+        try{
+            const result = UsuarioModelo.deleteUsuario(req.params)
+            if(result.status !==200){
+                return res.status(result.status).json({
+                    message:result.message,
+                    data:result.data
+                })
+            }
+            return res.status(result.status).json(
+                    {
+                        message:result.message,
+                        data:result.data
+                    }
+                )
+        }catch(error){
+            console.log("Error ? ", error.message)
+            return res.status(400).json({
+                
+                message: "Datos invalidos",
+                error:error.message
+            })  
+        }
+    }
 }

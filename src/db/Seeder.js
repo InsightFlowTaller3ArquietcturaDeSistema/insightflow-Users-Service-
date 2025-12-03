@@ -65,4 +65,3 @@ export function seedUsers() {
   }
 }
 seedUsers()
-console.log(usersDB)

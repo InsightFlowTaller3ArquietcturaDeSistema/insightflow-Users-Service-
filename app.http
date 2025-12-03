@@ -22,3 +22,27 @@ Content-Type: application/json
     "usuario":"UsuarioJavier",
     "contrasenia":"passJavier"
 }
+
+### Get all usuarios
+get http://localhost:3000/usuario/users
+
+#### Get Usuario por id
+get http://localhost:3000/usuario/users/c01423b7-97ba-4302-8e34-df32f53d8a20
+
+### Actualizar campos
+
+patch http://localhost:3000/usuario/users/eb160e71-e7cd-4f0a-a50a-c782e58a153b
+Content-Type: application/json
+
+{
+    "nombre_completo": "Javier nombre2 apellido 1 apellido 2",
+    "correo": "Javier@insightflow.cl",
+    "usuario": "UsuarioJavier",
+    "contrasenia": "passJavier",
+    "fecha_nacimiento": "2004/11/25",
+    "telefono":"+56 9 3333 2222",
+    "direccion": "Direccion6"
+}
+
+### sofdelete
+delete http://localhost:3000/usuario/users/922561e1-7f89-4e67-b013-2365e049b024
