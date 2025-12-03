@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --watch src/app.js"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js",
+    "docker:build": "docker build -t insightflow-api .",
+    "docker:run": "docker run -p 3000:3000 insightflow-api"
   },
   "keywords": [],
   "author": "",
