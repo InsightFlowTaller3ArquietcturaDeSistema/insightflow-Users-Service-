@@ -1,4 +1,4 @@
-import { UsuarioModelo } from "../model/usuario.js";
+import { UsuarioModelo } from "../model/Usuario.js";
 import {generateTokken} from '../utils/jwt.js';
 import { 
     crearUsuarioSchema, 
