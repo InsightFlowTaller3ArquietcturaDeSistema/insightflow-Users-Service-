@@ -111,7 +111,7 @@ export class UsuarioModelo{
                 };
             }
 
-                        let obj = {};
+            let obj = {};
             cabezera.forEach((columna, index) => {
                 if (columna !== "contrasenia" || columna !== "Direccion" || columna !== "telefono") {
                     
@@ -120,13 +120,13 @@ export class UsuarioModelo{
             });
 
             return {
-            status: 200,
-            data: obj
+                status: 200,
+                data: obj
             };
         } catch (error) {
             return {
-            status: 400,
-            message: "Error en obtener el dato por id: " + error.message
+                status: 400,
+                message: "Error en obtener el dato por id: " + error.message
             };
         }
     }
@@ -218,7 +218,6 @@ export class UsuarioModelo{
             }
 
             cabezera.forEach((columna, i) => {
-                // Ignorar id y estado
                 if ( columna === "estado") {usersDB[indiceReal][i] = "inactivo"};
                     
             });

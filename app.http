@@ -8,7 +8,7 @@ Content-Type: application/json
     "correo": "Javier@insightflow.cl",
     "usuario": "UsuarioJavier",
     "contrasenia": "passJavier",
-    "fecha_nacimiento": "2004/11/25",
+    "fecha_nacimiento": "2004-11-25",
     "telefono":"+56 9 3333 2222",
     "direccion": "Direccion6"
     
@@ -25,24 +25,28 @@ Content-Type: application/json
 
 ### Get all usuarios
 get http://localhost:3000/usuario/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YWJjYjE1Yy0zYjU1LTQ1ZjMtYTNjMC1jZTVhMDI3NjNjZjEiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIiLCJqdGkiOiJiOTI1MDhhYy1lYzQzLTRlNjMtYjNlOC1jZTJiODQ1YTA2NjciLCJpYXQiOjE3NjQ3NzU2MjksImV4cCI6MTc2NDc3OTIyOX0.gtSukgrke66fFaKx3RoGYRpc4lUB80dZ1MJk0herCOg
 
 #### Get Usuario por id
-get http://localhost:3000/usuario/users/c01423b7-97ba-4302-8e34-df32f53d8a20
+get http://localhost:3000/usuario/users/173b9389-437c-44ff-a8da-d3ad8f38eff7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YWJjYjE1Yy0zYjU1LTQ1ZjMtYTNjMC1jZTVhMDI3NjNjZjEiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIiLCJqdGkiOiJiOTI1MDhhYy1lYzQzLTRlNjMtYjNlOC1jZTJiODQ1YTA2NjciLCJpYXQiOjE3NjQ3NzU2MjksImV4cCI6MTc2NDc3OTIyOX0.gtSukgrke66fFaKx3RoGYRpc4lUB80dZ1MJk0herCOg
 
 ### Actualizar campos
 
-patch http://localhost:3000/usuario/users/eb160e71-e7cd-4f0a-a50a-c782e58a153b
+patch http://localhost:3000/usuario/users/173b9389-437c-44ff-a8da-d3ad8f38eff7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YWJjYjE1Yy0zYjU1LTQ1ZjMtYTNjMC1jZTVhMDI3NjNjZjEiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIiLCJqdGkiOiJiOTI1MDhhYy1lYzQzLTRlNjMtYjNlOC1jZTJiODQ1YTA2NjciLCJpYXQiOjE3NjQ3NzU2MjksImV4cCI6MTc2NDc3OTIyOX0.gtSukgrke66fFaKx3RoGYRpc4lUB80dZ1MJk0herCOg
 Content-Type: application/json
 
 {
     "nombre_completo": "Javier nombre2 apellido 1 apellido 2",
     "correo": "Javier@insightflow.cl",
-    "usuario": "UsuarioJavier",
+    "usuario": "UsuarioJavier1",
     "contrasenia": "passJavier",
-    "fecha_nacimiento": "2004/11/25",
+    "fecha_nacimiento": "2004-11-25",
     "telefono":"+56 9 3333 2222",
     "direccion": "Direccion6"
 }
 
 ### sofdelete
-delete http://localhost:3000/usuario/users/922561e1-7f89-4e67-b013-2365e049b024
+delete http://localhost:3000/usuario/users/173b9389-437c-44ff-a8da-d3ad8f38eff7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI5YWJjYjE1Yy0zYjU1LTQ1ZjMtYTNjMC1jZTVhMDI3NjNjZjEiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIiLCJqdGkiOiJiOTI1MDhhYy1lYzQzLTRlNjMtYjNlOC1jZTJiODQ1YTA2NjciLCJpYXQiOjE3NjQ3NzU2MjksImV4cCI6MTc2NDc3OTIyOX0.gtSukgrke66fFaKx3RoGYRpc4lUB80dZ1MJk0herCOg

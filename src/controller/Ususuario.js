@@ -1,13 +1,32 @@
 import { UsuarioModelo } from "../model/usuario.js";
 import {generateTokken} from '../utils/jwt.js';
+import { 
+    crearUsuarioSchema, 
+    loginSchema, 
+    actualizarUsuarioSchema, 
+    eliminarUsuarioSchema,
+    obtenerUsuarioPorIdSchema 
+} from '../validator/usuario.js';
+
 
 export class UsuarioController{
+
     static  PostUser(req,res){
         try{
-            const result = UsuarioModelo.CreateUser(req.body);
+            const validatedData = crearUsuarioSchema.parse(req.body);
+
+            const result = UsuarioModelo.CreateUser(validatedData);
             return res.status(result.status).json({data: result.data, message: result.message })    
         }catch(error){
-            console.log("Error ? ", error.message)
+            if (error.errors) {
+                return res.status(400).json({
+                    message: "Error de validación",
+                    errors: error.errors.map(err => ({
+                        campo: err.path.join('.'),
+                        mensaje: err.message
+                    }))
+                });
+            }
             return res.status(400).json({
                 
                 message: "Datos invalidos",
@@ -18,7 +37,9 @@ export class UsuarioController{
     
     static PostLogin(req,res){
         try{
-            const result = UsuarioModelo.LoginUser(req.body)
+            const validatedData = loginSchema.parse(req.body);
+            
+            const result = UsuarioModelo.LoginUser(validatedData)
             if(result.status !==201){
                 return res.status(result.status).json(
                     {
@@ -46,7 +67,15 @@ export class UsuarioController{
             )
         }
         catch(error){
-            console.log("Error ? ", error.message)
+            if (error.errors) {
+                return res.status(400).json({
+                    message: "Error de validación",
+                    errors: error.errors.map(err => ({
+                        campo: err.path.join('.'),
+                        mensaje: err.message
+                    }))
+                });
+            }
             return res.status(400).json({
                 
                 message: "Datos invalidos",
@@ -56,6 +85,7 @@ export class UsuarioController{
     }
     static getAllUser(req,res){
         try{
+
             const result = UsuarioModelo.TodosDatos()
             if(result.status !==200){
                 return res.status(result.status).json({
@@ -70,7 +100,6 @@ export class UsuarioController{
                     }
                 )
         }catch(error){
-            console.log("Error ? ", error.message)
             return res.status(400).json({
                 
                 message: "Datos invalidos",
@@ -80,7 +109,10 @@ export class UsuarioController{
     }
     static getIdUsuario(req,res){
         try{
-            const result = UsuarioModelo.TodosDatosId(req.params.id)
+            const validatedData = obtenerUsuarioPorIdSchema.parse({ 
+                id: req.params.id 
+            });
+            const result = UsuarioModelo.TodosDatosId(validatedData.id)
             if(result.status !==200){
                 return res.status(result.status).json({
                     message:result.message,
@@ -94,7 +126,15 @@ export class UsuarioController{
                     }
                 )
         }catch(error){
-            console.log("Error ? ", error.message)
+            if (error.errors) {
+                return res.status(400).json({
+                    message: "Error de validación",
+                    errors: error.errors.map(err => ({
+                        campo: err.path.join('.'),
+                        mensaje: err.message
+                    }))
+                });
+            }
             return res.status(400).json({
                 
                 message: "Datos invalidos",
@@ -103,11 +143,16 @@ export class UsuarioController{
         }
     }
     static patchUsuario(req,res){
-        const data ={id:req.params.id,
-            ...req.body
-        }
+        
         try{
-            const result = UsuarioModelo.actualizarUsuario(data)
+            const data = {
+                id: req.params.id,
+                ...req.body
+            };
+            
+            
+            const validatedData = actualizarUsuarioSchema.parse(data);
+            const result = UsuarioModelo.actualizarUsuario(validatedData)
             if(result.status !==200){
                 return res.status(result.status).json({
                     message:result.message,
@@ -121,7 +166,15 @@ export class UsuarioController{
                     }
                 )
         }catch(error){
-            console.log("Error ? ", error.message)
+            if (error.errors) {
+                return res.status(400).json({
+                    message: "Error de validación",
+                    errors: error.errors.map(err => ({
+                        campo: err.path.join('.'),
+                        mensaje: err.message
+                    }))
+                });
+            }
             return res.status(400).json({
                 
                 message: "Datos invalidos",
@@ -131,6 +184,9 @@ export class UsuarioController{
     }
     static deleteUsuario(req,res){
         try{
+            const validatedData = eliminarUsuarioSchema.parse({ 
+                id: req.params.id 
+            });
             const result = UsuarioModelo.deleteUsuario(req.params)
             if(result.status !==200){
                 return res.status(result.status).json({
@@ -145,7 +201,15 @@ export class UsuarioController{
                     }
                 )
         }catch(error){
-            console.log("Error ? ", error.message)
+            if (error.errors) {
+                return res.status(400).json({
+                    message: "Error de validación",
+                    errors: error.errors.map(err => ({
+                        campo: err.path.join('.'),
+                        mensaje: err.message
+                    }))
+                });
+            }
             return res.status(400).json({
                 
                 message: "Datos invalidos",
