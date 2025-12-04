@@ -29,7 +29,7 @@ export class UsuarioController{
             }
             return res.status(400).json({
                 
-                message: "Datos invalidos",
+                message: "Datos invalidos en el registro",
                 error:error.message
             })
         }
@@ -38,7 +38,7 @@ export class UsuarioController{
     static PostLogin(req,res){
         try{
             const validatedData = loginSchema.parse(req.body);
-            
+            console.log(validatedData)
             const result = UsuarioModelo.LoginUser(validatedData)
             if(result.status !==201){
                 return res.status(result.status).json(
@@ -77,8 +77,7 @@ export class UsuarioController{
                 });
             }
             return res.status(400).json({
-                
-                message: "Datos invalidos",
+                message: "Datos invalidos o malos",
                 error:error.message
             })   
         }

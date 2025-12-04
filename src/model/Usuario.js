@@ -61,7 +61,7 @@ export class UsuarioModelo{
         }catch(error){
             return {
                 status:400,
-                message:"Error en el login"
+                message:"Error en el login" + error.message
             }
         }
     }

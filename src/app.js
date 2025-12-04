@@ -1,13 +1,21 @@
 import express from 'express';
 import { seedUsers } from './db/Seeder.js';
 import usuarioRouter from './router/Usuario.js';
+import cookieParser from "cookie-parser";
+import {corsMiddleware} from './middleware/cors.js'
 import dotenv from "dotenv";
 dotenv.config();
+
 const app = express()
-const PORT = process.env.PORT ||3000
+
+const PORT = process.env.PORT || 3000
+
 app.use(express.json())
+app.use(cookieParser())
+app.use(corsMiddleware)
 seedUsers();
-app.use('/Usuario',usuarioRouter)
+
+app.use('/usuario',usuarioRouter)
 app.get('/', (req, res) => {
     res.send('Hola, servidor funcionando, los ususarios son');
 });
