@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
     res.send('Hola, servidor funcionando, los ususarios son');
 });
 
-app.listen(PORT,()=>{
-    console.log(`El servidor se esta escuchando en http://localhost:${PORT}`)
+app.listen(PORT,'0.0.0.0',()=>{
+    console.log(`El servidor se esta escuchando en http://0.0.0.0:${PORT}`)
 })
