@@ -95,8 +95,8 @@ Content-Type: application/json
     "nombre_completo": "Javier nombre2",
     "apellidos":" Apellido1 Apellido 2",
     "correo": "Javier1@insightflow.cl",
-    "usuario": "UsuarioJavier1",
-    "contrasenia": "passJavier",
+    "usuario": "u1",
+    "contrasenia": "pass1",
     "fecha_nacimiento": "2004-11-25",
     "telefono":"+56 9 3333 2222",
     "direccion": "Direccion6"
