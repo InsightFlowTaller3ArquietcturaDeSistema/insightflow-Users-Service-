@@ -85,3 +85,28 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYjNjN2RiN
 ### verificartoken
 GET http://localhost:3000/usuario/auth/verify
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkM2YxYzliNi01YTg2LTQ3ZmItYTIxOS0wZGQ3MGM4NDgwYTUiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiMDU4NThmMjAtMmQ2OS00MmU2LTljZTktNWM1MTMwZDBmMTA3IiwiaWF0IjoxNzY0ODExNzYxLCJleHAiOjE3NjQ4MTUzNjF9.I8s4hquXenW9Lkn72EGg6V3Ps2C0PSROGBaU4xPdNSg
+
+
+###
+post https://user-services-13hx.onrender.com/usuario/users
+Content-Type: application/json
+
+{
+    "nombre_completo": "Javier nombre2",
+    "apellidos":" Apellido1 Apellido 2",
+    "correo": "Javier1@insightflow.cl",
+    "usuario": "UsuarioJavier1",
+    "contrasenia": "passJavier",
+    "fecha_nacimiento": "2004-11-25",
+    "telefono":"+56 9 3333 2222",
+    "direccion": "Direccion6"
+    
+} 
+###
+post https://user-services-13hx.onrender.com/Usuario/login
+Content-Type: application/json
+
+{
+    "usuario":"UsuarioJavier1",
+    "contrasenia":"passJavier"
+}
