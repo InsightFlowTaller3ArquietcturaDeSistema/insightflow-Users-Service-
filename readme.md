@@ -26,6 +26,7 @@ Durante el desarrollo de esta aplicación se implementarios varios patrones de d
 
 - Router Pattern, este con el fin de crear la modulación de las rutas del sistema
 - Singleton, para tener una una instancia de express dentro del sistema
+- repository Para separar la lógia de negocios con la de los datos
 
 
 ## 🚀 Tecnologías
