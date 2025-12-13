@@ -99,14 +99,16 @@ Content-Type: application/json
     "contrasenia": "pass1",
     "fecha_nacimiento": "2004-11-25",
     "telefono":"+56 9 3333 2222",
-    "direccion": "Direccion6"
-    
+    "direccion": "Direccion6"  
 } 
 ###
 post https://user-services-13hx.onrender.com/Usuario/login
 Content-Type: application/json
 
 {
-    "usuario":"UsuarioJavier1",
-    "contrasenia":"passJavier"
+    "usuario":"u1",
+    "contrasenia":"pass1"
 }
+###
+get https://user-services-13hx.onrender.com/usuario/users
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYTYzMmMxNS1jY2QyLTRiZWEtYTAzYS1kNDM3NTBiYTZiODYiLCJ1c2VybmFtZSI6InUxIiwianRpIjoiODFiNzE5MTUtYjU3ZC00ZjM0LWI0MzgtYjU0Y2M5MTUwZDc0IiwiaWF0IjoxNzY1MTQ5Njc0LCJleHAiOjE3NjUxNTMyNzR9.hEhyptctfEmeoYQiICNUKQehvHch24J4W9ZsAZot9BI
