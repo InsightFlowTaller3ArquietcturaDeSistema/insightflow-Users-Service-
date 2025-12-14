@@ -1,0 +1,460 @@
+{
+  "info": {
+    "_postman_id": "28a1023a-a0ee-4709-b060-8030e424cf1a",
+    "name": "Taller3User-Services",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "localhost",
+      "item": [
+        {
+          "name": "Delete",
+          "id": "10bb7bc0-23d3-4903-bb30-4d59a8156ae2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:3000/usuario/users/173b9389-437c-44ff-a8da-d3ad8f38eff7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "users",
+                "173b9389-437c-44ff-a8da-d3ad8f38eff7"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update",
+          "id": "2d06326b-ce7f-4654-bbd6-a29978e49bb9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre_completo\": \"Javier nombre2 apellido 1 apellido 2\",\r\n    \"correo\": \"Javier@insightflow.cl\",\r\n    \"usuario\": \"UsuarioJavier\",\r\n    \"contrasenia\": \"passJavier\",\r\n    \"fecha_nacimiento\": \"2004-11-25\",\r\n    \"telefono\":\"+56 9 3333 2222\",\r\n    \"direccion\": \"Direccion6\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuario/users/1582dafd-ae22-4739-a481-c1811e649133",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "users",
+                "1582dafd-ae22-4739-a481-c1811e649133"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GetById",
+          "id": "7e12e9f3-d0cd-4bc9-910a-6c1e3cd434ea",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:3000/usuario/users/bf4c057d-6153-43f8-b65d-c00c102e1f83",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "users",
+                "bf4c057d-6153-43f8-b65d-c00c102e1f83"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GetAll",
+          "id": "b198a4b0-ae2b-4ee9-8165-b958923ccfbe",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuario/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "users"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "id": "082f0224-110a-45fb-b543-6375d191603e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"usuario\":\"UsuarioJavier1\",\r\n    \"contrasenia\":\"passJavier\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuario/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Register",
+          "id": "cb611bc7-2ec1-4706-8d0e-6b387b1fe057",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre_completo\": \"Javier nombre2\",\r\n    \"apellidos\":\" Apellido1 Apellido 2\",\r\n    \"correo\": \"Javier1@insightflow.cl\",\r\n    \"usuario\": \"UsuarioJavier1\",\r\n    \"contrasenia\": \"passJavier\",\r\n    \"fecha_nacimiento\": \"2004-11-25\",\r\n    \"telefono\":\"+56 9 3333 2222\",\r\n    \"direccion\": \"Direccion6\"\r\n    \r\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/usuario/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "users"
+              ]
+            }
+          }
+        },
+        {
+          "name": "VerifyToken",
+          "id": "f4cf0d1f-395e-46c0-a0ac-f1e5c960f48e",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": ""
+            }
+          }
+        }
+      ],
+      "id": "b580c6ba-2a5c-4d72-9548-3843df68f80e"
+    },
+    {
+      "name": "deploy",
+      "item": [
+        {
+          "name": "Delete",
+          "id": "5e4e320d-9f4f-4e21-8862-ce16fd0981d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/users/173b9389-437c-44ff-a8da-d3ad8f38eff7",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "users",
+                "173b9389-437c-44ff-a8da-d3ad8f38eff7"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update",
+          "id": "40117f58-130b-40f7-8326-879ce9407d5e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre_completo\": \"Javier nombre2 apellido 1 apellido 2\",\r\n    \"correo\": \"Javier@insightflow.cl\",\r\n    \"usuario\": \"UsuarioJavier1\",\r\n    \"contrasenia\": \"passJavier\",\r\n    \"fecha_nacimiento\": \"2004-11-25\",\r\n    \"telefono\":\"+56 9 3333 2222\",\r\n    \"direccion\": \"Direccion6\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/users/1582dafd-ae22-4739-a481-c1811e649133",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "users",
+                "1582dafd-ae22-4739-a481-c1811e649133"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GetById",
+          "id": "08187053-f20d-4d73-992c-b90e7ad83591",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/users/bf4c057d-6153-43f8-b65d-c00c102e1f83",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "users",
+                "bf4c057d-6153-43f8-b65d-c00c102e1f83"
+              ]
+            }
+          }
+        },
+        {
+          "name": "GetAll",
+          "id": "87cb0020-ec82-4683-9d55-eafe53f05f33",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNTgyZGFmZC1hZTIyLTQ3MzktYTQ4MS1jMTgxMWU2NDkxMzMiLCJ1c2VybmFtZSI6IlVzdWFyaW9KYXZpZXIxIiwianRpIjoiOTlhZWIyZWEtZDUzYS00ZTVjLWEzMjAtNzhlZmI4ODEwNmFmIiwiaWF0IjoxNzY1NjgwNjY2LCJleHAiOjE3NjU2ODQyNjZ9.4_I3a00kBLooNOT9usTnRes9DY7Haj_B-EGuMtJyTMU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/users",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "users"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Register",
+          "id": "55739e0a-7ec8-4cc6-a227-7be2ac7b2d16",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"nombre_completo\": \"Javier nombre2\",\r\n    \"apellidos\":\" Apellido1 Apellido 2\",\r\n    \"correo\": \"Javier1@insightflow.cl\",\r\n    \"usuario\": \"UsuarioJavier1\",\r\n    \"contrasenia\": \"passJavier\",\r\n    \"fecha_nacimiento\": \"2004-11-25\",\r\n    \"telefono\":\"+56 9 3333 2222\",\r\n    \"direccion\": \"Direccion6\"\r\n    \r\n} ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/users",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "users"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "id": "4dc6980c-c570-4f6d-a60a-cc5941fbe95a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"usuario\":\"UsuarioJavier1\",\r\n    \"contrasenia\":\"passJavier\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://user-services-13hx.onrender.com/usuario/login",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "login"
+              ]
+            }
+          }
+        },
+        {
+          "name": "VerifyToken",
+          "id": "aa01a52a-f2b1-40c4-ab78-60efdd8f8c08",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": ""
+            }
+          }
+        }
+      ],
+      "id": "36173558-4b6a-44d9-aa59-d46b169b8bc9"
+    }
+  ]
+}
