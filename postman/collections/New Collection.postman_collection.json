@@ -225,7 +225,17 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": ""
+              "raw": "http://localhost:3000/usuario/auth/verify",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "usuario",
+                "auth",
+                "verify"
+              ]
             }
           }
         }
@@ -449,7 +459,18 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": ""
+              "raw": "https://user-services-13hx.onrender.com/usuario/auth/verify",
+              "protocol": "https",
+              "host": [
+                "user-services-13hx",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "usuario",
+                "auth",
+                "verify"
+              ]
             }
           }
         }
